@@ -82,7 +82,7 @@
 
 			//获取当前是否是在测试环境下运行(R后缀的index是发布版本)
 			window.customObejeck.getIsDebugIndex = function () {
-				return true
+				return false
 			}
 
 			//获取当前版本号 每一次打包后这里加1就行了
@@ -99,7 +99,6 @@
 
 		// 根据进度更新进度条的宽度 finished 已经完成的数量 total总数量 total有时候不是很准确
 		function updateProgressBar(finished, total) { //director.ts中修改 bundle.loadScene加了一个进度条回调函数
-			console.log(finished, total)
 			total = 497 + 30
 			if (finished >= 497 && finished < total) {
 				setTimeout(() => {
@@ -117,12 +116,6 @@
 			progressText.textContent = "تحميل:" + "%" + progress;
 		}
 		addFun()
-	</script>
-
-	<script src="./vconsole.min.9e84b.js"></script>
-	<script type="text/javascript">
-		// open web debugger console
-		window.VConsole && (window.vConsole = new VConsole());
 	</script>
 
 	<!-- Polyfills bundle. -->
